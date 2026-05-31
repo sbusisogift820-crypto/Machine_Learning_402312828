@@ -1,6 +1,5 @@
 # Machine_Learning_402312828
 
-markdown
 # Integrated Machine Learning Systems Project
 
 **Course Module:** Machine Learning
