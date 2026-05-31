@@ -28,23 +28,21 @@ Component B constructs an automated, fact-grounded knowledge management pipeline
 ## 2. Directory Tree Structure
 
 text
-├── data/
-│   ├── master_hansard_dataset/     # Temporary byte-streamed/downloaded PDFs
+* data/ master_hansard_dataset      # Temporary byte-streamed/downloaded PDFs
+* car-accidents.csv                 # South African Traffic Accident Dataset
 
-│   └── car-accidents.csv           # South African Traffic Accident Dataset
+*index
+- hansard_faiss.index               # Exported local FAISS Vector Store binaries
 
-├── index/
-│   └── hansard_faiss.index/        # Exported local FAISS Vector Store binaries
+*notebooks
+- component_a_traffic.ipynb: S_A_Road_Accidents_Dataset           # Execution notebook for Traffic ML/RL pipeline
+-  component_b_rag.ipynb: Hansard_Transcript_Interpretation       # Execution notebook for Tokenization, Fine-Tuning, & RAG
 
-├── notebooks/
-│   ├── component_a_traffic.ipynb   # Execution notebook for Traffic ML/RL pipeline
-│   └── component_b_rag.ipynb       # Execution notebook for Tokenization, Fine-Tuning, & RAG
+* master_hansard_dataset.csv      # Regex-parsed structural speech database
 
-├── master_hansard_dataset.csv      # Regex-parsed structural speech database
+* requirements.txt                # System dependency manifests
 
-├── requirements.txt                # System dependency manifests
-
-└── README.md                       # System documentation
+* README.md                       # System documentation
 
 
 ## 3. System Requirements & Installation
@@ -63,7 +61,7 @@ pip install pandas numpy scikit-learn xgboost pypdf faiss-cpu \
 
 ### Running Component A (Traffic Safety)
 
-1. Open `notebooks/component_a_traffic.ipynb` inside your environment.
+1. Open `S_A_Road_Accidents_Dataset.ipynb` inside your environment.
 2. Run the **Preprocessing Blocks** to trigger median/mode imputation, One-Hot Encoding, and peak outlier stabilizing via **Winsorization** (1st and 99th percentiles).
 3. Execute the **Ensemble Training Cells** to compare Random Forest and XGBoost architectures. XGBoost is utilized as the primary engine due to its exceptional sensitivity and lower rate of critical False Negatives ($F1\text{-score} = 86.6\%$).
 
@@ -77,7 +75,7 @@ pip install pandas numpy scikit-learn xgboost pypdf faiss-cpu \
 ### Running Component B (Legislative RAG)
 
 1. Open Google Colab's **Secrets (Key icon)** panel on the left sidebar, add your Hugging Face read access token under the variable name `HF_TOKEN`, and toggle on "Notebook access".
-2. Open `notebooks/component_b_rag.ipynb` and run the **Data Streaming Cell**. The script connects directly to the Parliament storage servers via `requests` and parses speeches line by line.
+2. Open `Hansard_Transcript_Interpretation(1).ipynb` and run the **Data Streaming Cell**. The script connects directly to the Parliament storage servers via `requests` and parses speeches line by line.
 3. Execute the **Transformer Training Cell** to check the policy sentiment model's classification metrics (Accuracy: $84.6\%$).
 
 #### Sentiment Classifier Performance Evaluation
@@ -115,4 +113,4 @@ system_prompt = (
 
 ## 7. License
 
-This project is made available under the MIT License - see clean code templates for redistribution details.
+This project is made available under the MIT License.
