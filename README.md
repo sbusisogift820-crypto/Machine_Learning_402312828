@@ -3,7 +3,8 @@
 markdown
 # Integrated Machine Learning Systems Project
 
-**Course Module:** Machine Learning \n
+**Course Module:** Machine Learning
+
 **Author:** Sbusiso Gift Mtimunye
 **Institution:** Richfield Graduate Institute of Technology  
 **Date:** 26 May 2026   
