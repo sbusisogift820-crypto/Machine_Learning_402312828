@@ -4,11 +4,10 @@ Here is an upgraded, publication-ready version of
 markdown
 # Integrated Machine Learning Systems Project
 
-**Course Module:** Advanced Intelligent Systems  
-**Author:** Sbusiso Gift  
+**Course Module:** Machine Learning 
+**Author:** Sbusiso Gift Mtimunye
 **Institution:** Richfield Graduate Institute of Technology  
-**Date:** May 2026  
-**Role:** Machine Learning Consultant  
+**Date:** 26 May 2026   
 
 ## 1. Project Architecture & Pipelines
 
@@ -59,13 +58,22 @@ pip install pandas numpy scikit-learn xgboost pypdf faiss-cpu \
 1. Open `notebooks/component_a_traffic.ipynb` inside your environment.
 2. Run the **Preprocessing Blocks** to trigger median/mode imputation, One-Hot Encoding, and peak outlier stabilizing via **Winsorization** (1st and 99th percentiles).
 3. Execute the **Ensemble Training Cells** to compare Random Forest and XGBoost architectures. XGBoost is utilized as the primary engine due to its exceptional sensitivity and lower rate of critical False Negatives ($F1\text{-score} = 86.6\%$).
+
+#### XGBoost Model Performance
+![XGBoost Confusion Matrix](XGBoost_Confusion_Matrix.png)
 4. Run the **Q-Learning Matrix Loop** to train the agent. The system achieves complete asymptotic stability after 3,500 training epochs.
+
+### Reinforcement Learning Policy Convergence Metrics
+![MDP Policy Diagnostics](Markov_Decision_Process_%28MDP%29_Post-Training_Policy_Diagnostics.png)
 
 ### Running Component B (Legislative RAG)
 
 1. Open Google Colab's **Secrets (Key icon)** panel on the left sidebar, add your Hugging Face read access token under the variable name `HF_TOKEN`, and toggle on "Notebook access".
 2. Open `notebooks/component_b_rag.ipynb` and run the **Data Streaming Cell**. The script connects directly to the Parliament storage servers via `requests` and parses speeches line by line.
 3. Execute the **Transformer Training Cell** to check the policy sentiment model's classification metrics (Accuracy: $84.6\%$).
+
+#### Sentiment Classifier Performance Evaluation
+![Sentiment Confusion Matrix](Sentiment_Classification_Confusion_Matrx.png)
 4. Run the **Modern LCEL Chain Cell** to execute live queries against the database using a `HuggingFaceEndpoint` pointing to `google/flan-t5-large`.
 
 ## 5. Core Visual Code Architectures
