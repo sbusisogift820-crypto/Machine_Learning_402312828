@@ -69,6 +69,7 @@ pip install pandas numpy scikit-learn xgboost pypdf faiss-cpu \
 
 #### XGBoost Model Performance
 ![XGBoost Confusion Matrix](XGBoost_Confusion_Matrix.png)
+
 4. Run the **Q-Learning Matrix Loop** to train the agent. The system achieves complete asymptotic stability after 3,500 training epochs.
 
 ### Reinforcement Learning Policy Convergence Metrics
@@ -82,6 +83,7 @@ pip install pandas numpy scikit-learn xgboost pypdf faiss-cpu \
 
 #### Sentiment Classifier Performance Evaluation
 ![Sentiment Confusion Matrix](Sentiment_Classification_Confusion_Matrx.png)
+
 4. Run the **Modern LCEL Chain Cell** to execute live queries against the database using a `HuggingFaceEndpoint` pointing to `google/flan-t5-large`.
 
 ## 5. Core Visual Code Architectures
