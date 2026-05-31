@@ -28,7 +28,7 @@ Component B constructs an automated, fact-grounded knowledge management pipeline
 
 text
 ├── data/
-│   ├── raw_hansards/               # Temporary byte-streamed/downloaded PDFs
+│   ├── master_hansard_dataset/     # Temporary byte-streamed/downloaded PDFs
 │   └── car-accidents.csv           # South African Traffic Accident Dataset
 ├── index/
 │   └── hansard_faiss.index/        # Exported local FAISS Vector Store binaries
