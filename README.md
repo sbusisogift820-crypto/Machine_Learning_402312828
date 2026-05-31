@@ -53,6 +53,7 @@ This project is fully optimized to run inside a standard **Google Colab** enviro
 ### Dependencies
 
 Install the required partner-supported libraries directly inside your environment:
+
 pip install pandas numpy scikit-learn xgboost pypdf faiss-cpu \
             transformers datasets sentence-transformers \
             langchain langchain-community langchain-huggingface -q
@@ -88,6 +89,7 @@ pip install pandas numpy scikit-learn xgboost pypdf faiss-cpu \
 ### The Integrated Traffic Risk-to-Action Linkage
 
 The predictive output from the ensemble model directly updates the environment state for the Reinforcement Learning policy engine:
+
 # The Predictive Ensemble informs the Reactive RL Agent State
 predicted_risk_state = xgboost_model.predict(current_route_features)
 optimal_action = q_learning_agent.choose_action(predicted_risk_state)
@@ -100,6 +102,7 @@ optimal_action = q_learning_agent.choose_action(predicted_risk_state)
 ### Deterministic RAG Prompt Guardrails
 
 To prevent hallucination loops and block out-of-domain knowledge generation, the system locks the model context using strict system prompt engineering:
+
 system_prompt = (
     "Use the following pieces of retrieved context to answer the question. "
     "If you don't know the answer, say that you don't know.\n\n"
