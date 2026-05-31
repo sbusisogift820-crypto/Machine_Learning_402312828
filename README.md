@@ -30,15 +30,21 @@ Component B constructs an automated, fact-grounded knowledge management pipeline
 text
 ├── data/
 │   ├── master_hansard_dataset/     # Temporary byte-streamed/downloaded PDFs
+
 │   └── car-accidents.csv           # South African Traffic Accident Dataset
+
 ├── index/
 │   └── hansard_faiss.index/        # Exported local FAISS Vector Store binaries
+
 ├── notebooks/
 │   ├── component_a_traffic.ipynb   # Execution notebook for Traffic ML/RL pipeline
 │   └── component_b_rag.ipynb       # Execution notebook for Tokenization, Fine-Tuning, & RAG
+
 ├── master_hansard_dataset.csv      # Regex-parsed structural speech database
+
 ├── requirements.txt                # System dependency manifests
-└── README.md                       # System documentation (This file)
+
+└── README.md                       # System documentation
 
 
 ## 3. System Requirements & Installation
