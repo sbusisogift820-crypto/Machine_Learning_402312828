@@ -26,15 +26,17 @@ Component B constructs an automated, fact-grounded knowledge management pipeline
 
 ## 2. Directory Tree Structure
 
-text
-* data/ master_hansard_dataset      # Temporary byte-streamed/downloaded PDFs
-* car-accidents.csv                 # South African Traffic Accident Dataset
+*text
+- data/ master_hansard_dataset      # Temporary byte-streamed/downloaded PDFs
+
+- car-accidents.csv                 # South African Traffic Accident Dataset
 
 *index
 - hansard_faiss.index               # Exported local FAISS Vector Store binaries
 
 *notebooks
 - component_a_traffic.ipynb: S_A_Road_Accidents_Dataset           # Execution notebook for Traffic ML/RL pipeline
+
 -  component_b_rag.ipynb: Hansard_Transcript_Interpretation       # Execution notebook for Tokenization, Fine-Tuning, & RAG
 
 * master_hansard_dataset.csv      # Regex-parsed structural speech database
