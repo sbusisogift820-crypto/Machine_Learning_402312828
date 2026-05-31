@@ -6,7 +6,9 @@ markdown
 **Course Module:** Machine Learning
 
 **Author:** Sbusiso Gift Mtimunye
-**Institution:** Richfield Graduate Institute of Technology  
+
+**Institution:** Richfield Graduate Institute of Technology 
+
 **Date:** 26 May 2026   
 
 ## 1. Project Architecture & Pipelines
